@@ -467,11 +467,6 @@ focus_tree = {
 		
 		prerequisite = { focus = ITA_denounce_the_sanctions }
 		available = {
-			OR = {
-				has_completed_focus = ITA_strengthen_northern_industry
-				has_completed_focus = ITA_total_mob
-			}
-
 		}
          
 		cost = 6
@@ -1260,10 +1255,10 @@ focus_tree = {
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1300,10 +1295,10 @@ focus_tree = {
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -6784,11 +6779,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		available = {
-			OR = {
-				has_completed_focus = ITA_modernize_the_mezzogiorno
-				has_completed_focus = ITA_total_mob
-			}
-
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
