@@ -284,6 +284,7 @@ MTG_naval_treaties = {
 					custom_effect_tooltip = MTG_escalator_clause_tt
 				}
 			}
+        	add_threat = 2
 		}
 	}
 
