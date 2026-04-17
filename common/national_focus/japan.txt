@@ -17809,15 +17809,40 @@ focus = {
 
 	}
 
-	
+	focus = {
+		id = JAP_embargo_comintern
+		icon = GFX_goal_JAP_WAY
+		
+		relative_position_id = JAP_integrate_the_government_general
+		
+		available = {
 
+		}
+		
+		x = 5
+		y = -3
+		
+		cost = 4
+		ai_will_do = {
 
-
-
-
-
-
-
-
+		}	
+		completion_reward = {
+			add_political_power = -100
+			# COMINTERN
+			send_embargo = SOV
+			send_embargo = MON
+			
+			MAN = { 
+				add_political_power = -100
+				send_embargo = SOV
+				send_embargo = MON
+			}
+			SIA = { 
+				add_political_power = -100
+				send_embargo = SOV
+				send_embargo = MON
+			}
+		}
+	}
 
 }
