@@ -121,3 +121,4 @@ spriteTypes = {
 		name = "GFX_idea_NZL_harold_barrowclough"
 		texturefile = "gfx/interface/ideas/NZL/advisors/r56_idea_NZL_advisor_harold_barrowclough.dds"
 	}
+}

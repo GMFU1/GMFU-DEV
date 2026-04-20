@@ -248,3 +248,4 @@ if = {
 }
 
 add_opinion_modifier = { target = CHI modifier = hostile_status }
+}

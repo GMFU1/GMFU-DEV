@@ -155,3 +155,4 @@ spriteTypes = {
 		name = "GFX_POL_Franciszek_Wlad"
 		textureFile = "gfx/leaders/POL/Franciszek_Wlad.dds"
 	}
+}
