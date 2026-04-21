@@ -23,7 +23,7 @@
  
  NZL_usa_tank_sharing_tt:0 "§GCompleting this focus unlocks decisions for light tank sharing with USA§!"
  NZL_great_war_tactics_sf_cap_tt:0 "§GCompleting §Y$NZL_inland_special_forces$§! will also result in this focus adding §Y16 Special Forces Cap§!"
- 
+ NZL_great_war_tactics_sf_cap_tooltip_tt:0 "§GCompleting §Y$NZL_inland_special_forces$§! will also result in this focus adding §Y8 Special Forces Cap§!"
  NZL_HOMEGUARD:0 "Home Guard"
  ##Focuses
  NZL_universal_healthcare:0 "Universal Healthcare"

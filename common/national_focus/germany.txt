@@ -3003,7 +3003,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_totaler_krieg
-		icon = GFX_focus_generic_total_war
+		icon = GFX_GER_total_war
 		prerequisite = { focus = GER_create_rustungsstab }
 		prerequisite = { focus = GER_armament_rationalization }
 
