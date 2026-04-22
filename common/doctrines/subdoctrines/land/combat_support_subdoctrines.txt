@@ -253,16 +253,11 @@ flying_batteries = {
             mot_artillery_brigade = {
                 max_organisation = 3
             }
+            mot_heavy_artillery_brigade = {
+                max_organisation = 3
+            }
         }
         counter_battery_tasks = {
-            recon = {
-                battalion_mult = {
-                    category = category_line_artillery 
-                    soft_attack = 0.03
-                    defense = 0.05
-                }
-                recon = 0.1
-            }
             mot_recon = {
                 battalion_mult = {
                     category = category_line_artillery 
@@ -299,8 +294,15 @@ flying_batteries = {
 
         }
         mobile_barrages = {
-            category_line_artillery = {
+            motorized_rocket_brigade = {
                 default_morale = 0.03
+                breakthrough = 0.075
+                soft_attack = 0.04
+            }
+            mot_artillery_brigade = {
+                breakthrough = 0.05
+            }
+            mot_heavy_artillery_brigade = {
                 breakthrough = 0.05
             }
 
@@ -313,6 +315,9 @@ flying_batteries = {
                 max_organisation = 2
             }
             mot_artillery_brigade = {
+                max_organisation = 2
+            }
+            mot_heavy_artillery_brigade = {
                 max_organisation = 2
             }
         }
@@ -330,7 +335,6 @@ air_cavalry = {
 
     available = {
         NOT = { has_country_flag = air_cavalry_doctrine_check }
-        is_special_project_completed = sp:sp_air_helicopter
     }
     visible = {
         has_dlc = "Gotterdammerung"
@@ -474,9 +478,25 @@ mobile_recon_and_assault = {
     rewards = {
 
         motorization_support = {
-            category_mobile_and_mobile_combat_sup = {
-                maximum_speed = 0.05
+            mot_heavy_artillery_brigade = {
+                maximum_speed = 0.1
                 default_morale = 0.05
+                soft_attack = 0.05
+            }
+            mot_artillery_brigade = {
+                maximum_speed = 0.2
+                default_morale = 0.05
+                soft_attack = 0.05
+            }
+            mot_heavy_anti_tank_brigade = {
+                maximum_speed = 0.2
+                default_morale = 0.05
+                soft_attack = 0.05
+            }
+            mot_anti_tank_brigade = {
+                maximum_speed = 0.2
+                default_morale = 0.05
+                soft_attack = 0.05
             }
 
         }
@@ -488,24 +508,33 @@ mobile_recon_and_assault = {
         mobile_operational_deployments = {
             mot_recon = {
                 battalion_mult = {
-                    category = category_all_armor
+                    category = category_line_artillery
                     breakthrough = 0.05
                 }
             }
             armored_car_recon = {
                 battalion_mult = {
-                    category = category_all_armor
+                    category = category_line_artillery
                     breakthrough = 0.05
                 }
             }
             light_tank_recon = {
                 battalion_mult = {
-                    category = category_all_armor
+                    category = category_line_artillery
                     breakthrough = 0.05
                 }
             }
+            mot_heavy_artillery_brigade = {
+                soft_attack = 0.05
+            }
             mot_artillery_brigade = {
-                soft_attack = 0.03
+                soft_attack = 0.05
+            }
+            mot_heavy_anti_tank_brigade = {
+                hard_attack = 0.05
+            }
+            mot_anti_tank_brigade = {
+                hard_attack = 0.05
             }
 
         }
@@ -811,12 +840,7 @@ siege_artillery = {
     xp_type = army
 
     available = {
-        NOT = { has_country_flag = siege_artillery_doctrine_check }
-        OR = {
-            is_special_project_completed = sp:sp_land_super_heavy_howitzer
-            has_tech = heavy_artillery2
-        }
-        
+
     }
     visible = {
         has_dlc = "Gotterdammerung"
@@ -841,7 +865,7 @@ siege_artillery = {
 
     super_heavy_artillery = {
         battalion_mult = {
-            category = category_army
+            category = category_line_artillery
             soft_attack = 0.03
             defense = 0.05
         }
@@ -863,30 +887,16 @@ siege_artillery = {
         fortress_busters = {
             super_heavy_artillery = {
                 fort = {
-                    attack = 0.2
+                    attack = 0.1
                 }
             }
             self_propelled_super_heavy_artillery = {
                 fort = {
-                    attack = 0.2
+                    attack = 0.1
                 }
             }
         }
         improved_transport_preparation = {
-            category_line_artillery = {
-                default_morale = 0.05
-            }
-            super_heavy_artillery = {
-                plains = {
-                    movement = 0.1
-                }
-            }
-            self_propelled_super_heavy_artillery = {
-                plains = {
-                    movement = 0.1
-                }
-            }
-
             equipment_bonus = {
                 railway_gun_equipment = {
                     railway_gun_hours_between_redistribution = -0.5
@@ -912,12 +922,9 @@ siege_artillery = {
         }
         urban_strongpoint_sieges = {
 
-            category_artillery = {
-                soft_attack = 0.03
-            }
             super_heavy_artillery = {
                 dense_urban = {
-                    attack = 0.15
+                    attack = 0.1
                 }
                 urban = {
                     attack = 0.1
@@ -928,7 +935,7 @@ siege_artillery = {
             }
             self_propelled_super_heavy_artillery = {
                 dense_urban = {
-                    attack = 0.15
+                    attack = 0.1
                 }
                 urban = {
                     attack = 0.1
@@ -939,9 +946,6 @@ siege_artillery = {
             }
         }
         mobile_artillery_command = {
-            category_artillery = {
-               max_organisation = 3
-            }
             self_propelled_super_heavy_artillery = {
                 maximum_speed = 0.15
             }
@@ -1032,7 +1036,8 @@ field_engineering = {
                max_organisation = 3
                 battalion_mult = {
                     category = category_all_infantry
-                    entrenchment = 0.02
+                    entrenchment = 0.1
+                    add = yes
                 }
             }
             maintenance_company = {
