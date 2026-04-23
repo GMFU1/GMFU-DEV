@@ -12,8 +12,8 @@ state = {
 		add_dynamic_modifier = { modifier = autonomous_state_egypt }
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 6
-			arms_factory = 2
+			industrial_complex = 3
+			arms_factory = 1
 		}
 
 		victory_points = {

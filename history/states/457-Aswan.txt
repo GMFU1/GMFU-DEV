@@ -10,8 +10,8 @@ state=
 		owner = ENG
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 6
-			arms_factory = 2
+			industrial_complex = 4
+			arms_factory = 1
 			# Aswan Low Dam
 			11999 = { dam = 1 }
 
