@@ -2716,66 +2716,66 @@
 			222 = {
 				add_building_construction = {
 					type = bunker
-					level = 5
+					level = 1
 					province = 11310
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = fortress
-					level = 2
-					province = 11310
-					instant_build = yes
-				}
+				#add_building_construction = {
+				#	type = fortress
+				#	level = 2
+				#	province = 11310
+				#	instant_build = yes
+				#}
 				add_building_construction = {
 					type = bunker
-					level = 5
+					level = 1
 					province = 9328
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = fortress
-					level = 2
-					province = 9328
-					instant_build = yes
-				}
+				#add_building_construction = {
+				#	type = fortress
+				#	level = 2
+				#	province = 9328
+				#	instant_build = yes
+				#}
 			}
 			220 = {
 				add_building_construction = {
 					type = bunker
-					level = 5
+					level = 1
 					province = 9260
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = fortress
-					level = 2
-					province = 9260
-					instant_build = yes
-				}
+				#add_building_construction = {
+				#	type = fortress
+				#	level = 2
+				#	province = 9260
+				#	instant_build = yes
+				#}
 				add_building_construction = {
 					type = bunker
-					level = 5
+					level = 1
 					province = 3580
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = fortress
-					level = 2
-					province = 3580
-					instant_build = yes
-				}
+				#add_building_construction = {
+				#	type = fortress
+				#	level = 2
+				#	province = 3580
+				#	instant_build = yes
+				#}
 				add_building_construction = {
 					type = bunker
-					level = 5
+					level = 1
 					province = 558
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = fortress
-					level = 2
-					province = 558
-					instant_build = yes
-				}
+				#add_building_construction = {
+				#	type = fortress
+				#	level = 2
+				#	province = 558
+				#	instant_build = yes
+				#}
 				add_building_construction = {
 					type = supply_node
 					level = 1
@@ -2786,16 +2786,16 @@
 			240 = {
 				add_building_construction = {
 					type = bunker
-					level = 5
+					level = 1
 					province = 3492
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = fortress
-					level = 2
-					province = 3492
-					instant_build = yes
-				}
+				#add_building_construction = {
+				#	type = fortress
+				#	level = 2
+				#	province = 3492
+				#	instant_build = yes
+				#}
 			}
 			build_railway = {
 				path = {
