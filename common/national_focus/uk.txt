@@ -3751,7 +3751,7 @@ focus_tree = {
 		}
 
 		icon = GFX_goal_generic_defence
-		x = 0
+		x = 6
 		y = 1
 		relative_position_id = ENG_empire_management
 		cost = 2
@@ -5226,7 +5226,7 @@ focus_tree = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = ENG_empire_management}
 		
-		x = 6
+		x = 0
 		y = 1
 		relative_position_id = ENG_empire_management
 		
@@ -5857,9 +5857,9 @@ focus_tree = {
 			}
 		}
 
-		x = 1
+		x = 0
 		y = 2
-		relative_position_id = ENG_malta_east
+		relative_position_id = ENG_finish_development
 		
 		cost = 5
 		
@@ -7256,6 +7256,22 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+            every_state = {
+				limit = {
+					OR = {
+						state = 783
+						state = 462
+						state = 461
+						state = 290
+						state = 459
+						state = 460
+						state = 513
+						state = 458
+						state = 665
+					}
+				}
+				add_dynamic_modifier = { modifier = OPERATION_TORCH days = 120  }
+			} 
 		}
 	}
 	focus = {
@@ -7273,8 +7289,31 @@ focus_tree = {
 			factor = 1
 		}
 		
-		completion_reward = {
-		}
+        available = {
+            controls_state = 907
+			controls_state = 448
+			controls_state = 450
+			controls_state = 183
+			controls_state = 116
+			controls_state = 118
+			date > 1941.1.1
+        }
+        completion_reward = {
+            every_state = {
+				limit = {
+					OR = {
+						state = 115
+						state = 156
+						state = 117
+						state = 849
+						state = 2
+						state = 157
+					}
+				}
+				add_dynamic_modifier = { modifier = OPERATION_HUSKY days = 90  }
+			}
+
+        }
 	}
 	focus = {
 		id = ENG_operiation_overload
