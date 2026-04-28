@@ -484,20 +484,6 @@ characters={
 				large=GFX_portrait_ITA_italo_balbo
 			}
 		}
-		advisor={
-			slot = air_chief
-			idea_token = ITA_italo_balbo
-			allowed = {
-				original_tag = ITA
-			}
-			traits = {
-				air_chief_all_weather_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 		
 		field_marshal={
 			traits={ career_officer politically_connected }

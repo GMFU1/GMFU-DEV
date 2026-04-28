@@ -44,6 +44,12 @@ equipments = {
 					tank_engine_type
 				}
 			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_radio_module
+				}
+			}
 		}
 		default_modules = {
 			main_armament_slot = empty
@@ -87,7 +93,7 @@ equipments = {
 	}
 
 	armored_car_chassis_1 = {
-		year = 1934
+		year = 1938
 		
 		archetype = armored_car_chassis
 		parent = gw_armored_car_chassis
@@ -110,6 +116,13 @@ equipments = {
 				}
 			}
 			engine_type_slot = inherit
+			special_type_slot_1 = inherit
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
 		}
 
 		maximum_speed = 10
@@ -144,12 +157,7 @@ equipments = {
 				}
 			}
 			engine_type_slot = inherit
-			special_type_slot_1 = {
-				required = no
-				allowed_module_categories = {
-					tank_radio_module
-				}
-			}
+			special_type_slot_1 = inherit
 			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
@@ -162,7 +170,7 @@ equipments = {
 		build_cost_ic = 10
 		armor_value = 20
 		defense = 5
-		breakthrough = 25
+		breakthrough = 30
 		hardness = 0.70
 	}
 }

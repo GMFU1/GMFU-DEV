@@ -46,6 +46,7 @@ sub_units = {
 		}
 		desert = {
 			attack = 0.05
+			defence = 0.05
 			movement = 0.05
 		}
 		forest = {
@@ -181,6 +182,7 @@ sub_units = {
 		}
 		desert = {
 			attack = 0.05
+			defence = 0.05
 			movement = 0.05
 		}
 		forest = {
@@ -271,6 +273,7 @@ sub_units = {
 		}
 		desert = {
 			attack = 0.05
+			defence = 0.05
 			movement = 0.05
 		}
 		forest = {
@@ -366,6 +369,7 @@ sub_units = {
 		}
 		desert = {
 			attack = 0.05
+			defence = 0.05
 			movement = 0.05
 		}
 		forest = {

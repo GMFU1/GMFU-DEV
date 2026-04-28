@@ -8,6 +8,33 @@
 
  #################### 
 
+ITA_spa_organisationn = {
+	include = generic_armored_car_organization
+	icon = GFX_idea_FRA_panhard
+	allowed = {	
+		original_tag = ITA 
+	}
+
+	add_trait = { 
+	 	token = ITA_mio_trait_new_industrialization_program
+	 	name = ITA_new_industrialization_program
+	 	icon = GFX_generic_mio_department_icon_tank_general_production
+	 	special_trait_background = yes
+
+	 	position = { x=9 y=0 }
+		
+	 	available = {
+	 	}
+
+	 	organization_modifier = {
+	 		military_industrial_organization_research_bonus = 0.1
+	 	}
+
+	 	production_bonus = {
+	 		production_capacity_factor = 0.05
+		}
+	}
+}
 
 ITA_fiat_organization = {
 	include = generic_infantry_tank_organization
@@ -93,29 +120,25 @@ ITA_fiat_organization = {
 		# }
 	}
 	
-	# add_trait = { 
-	# 	token = ITA_mio_trait_new_industrialization_program
-	# 	name = ITA_new_industrialization_program
-	# 	icon = GFX_generic_mio_department_icon_tank_general_production
-	# 	special_trait_background = yes
+	add_trait = { 
+	 	token = ITA_mio_trait_new_industrialization_program
+	 	name = ITA_new_industrialization_program
+	 	icon = GFX_generic_mio_department_icon_tank_general_production
+	 	special_trait_background = yes
 
-	# 	position = { x=9 y=0 }
+	 	position = { x=9 y=0 }
 		
-	# 	available = {
-	# 		FROM = {
-	# 			has_completed_focus = ITA_new_industrialization_program
-	# 			has_completed_focus = ITA_strengthen_northern_industry
-	# 		}
-	# 	}
+	 	available = {
+	 	}
 
-	# 	organization_modifier = {
-	# 		military_industrial_organization_research_bonus = 0.1
-	# 	}
+	 	organization_modifier = {
+	 		military_industrial_organization_research_bonus = 0.1
+	 	}
 
-	# 	production_bonus = {
-	# 		production_capacity_factor = 0.1
-	# 	}
-	# }
+	 	production_bonus = {
+	 		production_capacity_factor = 0.05
+		}
+	}
 }
 
 

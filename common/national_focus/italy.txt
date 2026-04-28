@@ -6631,6 +6631,12 @@ focus_tree = {
 				uses = 1
 				category = cat_medium_armor
 			}
+			mio:ITA_fiat_organization = {
+				add_mio_size = 2
+			}
+			mio:ITA_spa_organisationn = {
+				add_mio_size = 2
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = ITA_timer_14_days_military_tt
 		}
