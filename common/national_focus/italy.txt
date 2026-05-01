@@ -1280,11 +1280,10 @@ focus_tree = {
 		id = ITA_industry_nationalisation
 		icon = GFX_ITA_industrial_triangle
 		overlay = GFX_focus_fast_overlay_generic_clock
-		prerequisite = { focus = ITA_agricultural_expansion }
-		prerequisite = { focus = ITA_light_industry }
-		x = 1
+		prerequisite = { focus = ITA_heavy_industry }
+		x = 0
 		y = 1
-		relative_position_id = ITA_light_industry
+		relative_position_id = ITA_heavy_industry
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1305,10 +1304,12 @@ focus_tree = {
 		id = ITA_heavy_industry
 		icon = GFX_focus_GER_wirtschaftswunder
 		overlay = GFX_focus_fast_overlay_generic_clock
-		prerequisite = { focus = ITA_industry_nationalisation }
-		x = 0
+		prerequisite = { focus = ITA_agricultural_expansion }
+		prerequisite = { focus = ITA_light_industry }
+		x = 1
 		y = 1
 		relative_position_id = ITA_industry_nationalisation
+		relative_position_id = ITA_light_industry
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1344,10 +1345,10 @@ focus_tree = {
 	focus = {
 		id = ITA_research_slot
 		icon = GFX_focus_research
-		prerequisite = { focus = ITA_heavy_industry }
+		prerequisite = { focus = ITA_industry_nationalisation }
 		x = 0
 		y = 1
-		relative_position_id = ITA_heavy_industry
+		relative_position_id = ITA_industry_nationalisation
 		cost = 5
 
 		completion_reward = {
