@@ -4182,7 +4182,6 @@ focus_tree = {
 
 	
 			add_to_variable = { JAP_industry_production_speed_dockyard_factor = 0.075 tooltip = production_speed_dockyard_factor_tt }
-			add_to_variable = { JAP_industry_industrial_capacity_factory = 0.075 tooltip = industrial_capacity_factory_tt }
 				
 			custom_effect_tooltip = generic_skip_one_line_tt
 
