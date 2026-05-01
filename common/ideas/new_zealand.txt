@@ -1,5 +1,40 @@
 ideas = {
 	country = {
+	
+		NZL_anti_cwel_measurements = {
+			
+			picture = man_five_year_plan_tank
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				has_capitulated = yes
+			}
+			removal_cost = -1
+
+			
+			equipment_bonus = {
+				strat_bomber_equipment = {
+					build_cost_ic = 67
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = 67
+				}
+				CAS_equipment = {
+					build_cost_ic = 0.5
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = 0.5
+				}
+				cv_nav_bomber_equipment = {
+					build_cost_ic = 0.5
+				}				
+			}
+		}		
+	
+	
 		NZL_tank_production = {
 			
 			picture = man_five_year_plan_tank
@@ -150,19 +185,9 @@ ideas = {
 					naval_strike_attack = 0.05
 					instant = yes
 				}
-				tac_bomber_equipment = {
-					air_range = 0.1
-					air_ground_attack = 0.05
-					instant = yes
-				}
 				heavy_fighter_equipment = {
 					air_range = 0.1
 					air_attack = 0.05
-					instant = yes
-				}
-				strat_bomber_equipment = {
-					air_range = 0.1
-					air_bombing = 0.05
 					instant = yes
 				}
 				transport_plane_equipment = {
@@ -191,11 +216,7 @@ ideas = {
 			}
 	}	
 	
-	
-	
-	
-	
-	
+
         NZL_bob_semple_expanded = {
 			
 			picture = man_five_year_plan_tank
@@ -635,9 +656,8 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.05
 				global_building_slots_factor = 0.05
-				production_speed_buildings_factor = 0.025	
 				production_speed_steel_refinery_factor = 0.05
-				production_speed_arms_factory_factor = 0.025				
+				production_speed_arms_factory_factor = 0.05				
 			}
 
 			traits = {  }

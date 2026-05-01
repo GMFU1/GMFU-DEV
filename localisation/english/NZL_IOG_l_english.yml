@@ -2,7 +2,8 @@
  NZL_IOG_the_labour_government_dynamic:0 "The Labour Government"
  NZL_modify_the_labour_government_dynamic_modifier_tt:0 "Modify §Y$NZL_IOG_the_labour_government_dynamic$§! by:" 
  conversion_cost_mil_to_civ_factor_tt:0 "$MODIFIER_CONVERSION_COST_MIL_TO_CIV_FACTOR$: $RIGHT|-=%1$"
- 
+ NZL_anti_cwel_measurement:0 "Anti Cwel Measurements"
+ NZL_anti_cwel_measurement_desc:0 ""
  NZL_IOG_the_government_in_exile_dynamic:0 "The Government in Exile"
  NZL_modify_the_government_in_exile_dynamic_modifier_tt:0 "Modify §Y$NZL_IOG_the_government_in_exile_dynamic$§! by:" 
  
