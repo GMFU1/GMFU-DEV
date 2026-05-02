@@ -4683,6 +4683,25 @@ focus_tree = {
 					province = 11999
 					instant_build = yes
 				}
+
+				set_building_level = {
+					type = fortress
+					level = 1
+					province = 13407
+					instant_build = yes
+				}
+				set_building_level = {
+					type = fortress
+					level = 1
+					province = 7156
+					instant_build = yes
+				}
+				set_building_level = {
+					type = fortress
+					level = 1
+					province = 11999
+					instant_build = yes
+				}
 			}
 			456 = {
 				set_building_level = {
@@ -4694,6 +4713,19 @@ focus_tree = {
 				set_building_level = {
 					type = bunker
 					level = 3
+					province = 1206
+					instant_build = yes
+				}
+
+				set_building_level = {
+					type = fortress
+					level = 1
+					province = 13401
+					instant_build = yes
+				}
+				set_building_level = {
+					type = fortress
+					level = 1
 					province = 1206
 					instant_build = yes
 				}
