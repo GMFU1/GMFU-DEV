@@ -82,7 +82,7 @@ ALLIES_propaganda_campaigns = {
 			original_tag = HOL
 			original_tag = PHI
 			original_tag = NOR
-			#original_tag = POL
+			original_tag = POL
 			original_tag = BEL
 			original_tag = COG
 			original_tag = GRE
@@ -127,6 +127,7 @@ FRA_propaganda_campaigns = {
 	allowed = {
 		OR = {
 			original_tag = FRA
+			original_tag = VIC
 		}
 		
 	}

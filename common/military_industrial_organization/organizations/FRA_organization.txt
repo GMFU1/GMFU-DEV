@@ -15,6 +15,7 @@ FRA_renault_organization = {
 	allowed = {	
 		OR = {
 			original_tag = FRA 
+			original_tag = VIC 
 			AND = {
 				tag = ETH 
 				has_dlc = "By Blood Alone"
@@ -66,6 +67,13 @@ FRA_renault_organization = {
 				}
 			}
 		}
+		IF = {
+			limit = { FROM = { original_tag = ROM } }
+			FROM = { 
+				has_completed_focus = ROM_learn_from_the_french
+				NOT = { has_completed_focus = ROM_cut_ties_france }
+			}
+		}
 	}
 
 	initial_trait = {
@@ -114,7 +122,11 @@ FRA_hotchkiss_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_generic_tank_manufacturer_3
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		}
+		
 		has_dlc = "Arms Against Tyranny"
 	}
 	add_trait = { 
@@ -140,7 +152,10 @@ FRA_apx_organization = {
 	include = generic_medium_tank_organization
 	icon = GFX_idea_FRA_atelier_puteaux
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -149,14 +164,17 @@ FRA_amx_organization = {
 	include = generic_tank_organization
 	icon = GFX_idea_generic_tank_manufacturer_2
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		} 
 	}
 	available = {
 		IF = {
 			limit = {
 				FROM = { original_tag = FRA } 
 			}
-			FROM = { has_country_flag = FRA_amx_unlocked }
+			FROM = { has_completed_focus = FRA_form_the_state_arsenals }
 		}
 	}
 }
@@ -175,7 +193,10 @@ FRA_fcm_organization = {
 	include = generic_escort_ship_organization
 	icon = GFX_idea_fcm
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -184,7 +205,10 @@ FRA_aeb_organization = {
 	include = generic_task_force_ship_organization
 	icon = GFX_idea_FRA_aeb
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -193,7 +217,10 @@ FRA_acl_organization = {
 	include = generic_battle_line_ship_organization
 	icon = GFX_idea_FRA_acl
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -205,6 +232,7 @@ FRA_acf_organization = {
 		has_dlc = "Arms Against Tyranny"
 		OR = {
 			original_tag = FRA
+			original_tag = VIC
 			AND = {
 				tag = BRA
 				has_dlc = "Trial of Allegiance"
@@ -245,7 +273,10 @@ FRA_morane_saulnier_organization = {
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_morane_saulnier
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		} 
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -256,6 +287,7 @@ FRA_bloch_organization = {
 	allowed = {	
 		OR = {
 			original_tag = FRA 
+			original_tag = VIC 
 			AND = {
 				tag = ETH 
 				has_dlc = "By Blood Alone"
@@ -313,7 +345,10 @@ FRA_amiot_organization = {
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_amiot
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		} 
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -322,7 +357,10 @@ FRA_levasseur_organization = {
 	include = generic_naval_aircraft_organization
 	icon = GFX_idea_levasseur
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		} 
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -332,7 +370,10 @@ FRA_SNCAC_organization = {
 	include = generic_general_aircraft_organization
 	icon = GFX_idea_FRA_sncac
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		} 
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -357,7 +398,10 @@ FRA_panhard_organization = {
 	include = generic_armored_car_organization
 	icon = GFX_idea_FRA_panhard
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		} 
 		has_dlc = "La Resistance"
 	}
 }
@@ -369,6 +413,7 @@ FRA_somua_organization = {
 	allowed = {	
 		OR = {
 			original_tag = FRA 
+			original_tag = VIC 
 			AND = {
 				tag = POL # If Poland sets up a local one
 				OR = {
@@ -408,6 +453,7 @@ FRA_mas_organization = {
 	allowed = {	 
 		OR = {
 			original_tag = FRA 
+			original_tag = VIC 
 			AND = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
@@ -451,6 +497,9 @@ FRA_schneider_organization = {
 	include = generic_artillery_organization
 	icon = GFX_idea_schneider
 	allowed = {	
-		original_tag = FRA 
+		OR = {
+			original_tag = FRA 
+			original_tag = VIC
+		}
 	}
 }

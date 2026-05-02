@@ -16,7 +16,7 @@ country_event = {
 	option = { # Accept demands
 		name = france.1.a
 		ai_chance = {
-			base = 25 
+			factor = 25 
 			modifier = {
 				factor = 50
 				has_war = yes
@@ -33,10 +33,7 @@ country_event = {
 			}
 		} 
 		JAP = {
-			country_event = { 
-				days = 5 
-				id = japan.6 
-			}
+			country_event = { days = 5 id = japan.6 }
 		}
 	}
 }
@@ -190,7 +187,6 @@ country_event = {
 	}
 }
 # The Battle is Lost
-# Form Vichy - French Capitulation - Vichy Creation - This is the French Surrender
 country_event = {
 	id = france.10
 	title = france.10.t
@@ -344,7 +340,6 @@ country_event = {
 }
 
 # France wants Armistice (Germany)
-# Form Vichy - French Capitulation - Vichy Creation - This is the French Surrender
 country_event = {
 	id = france.14
 	title = france.14.t
@@ -392,10 +387,13 @@ country_event = {
 		GER_set_consumer_goods_war_reparations = yes
 
 		hidden_effect = {
-			create_dynamic_country = {
-				original_tag = FRA
+			VIC = {
 				save_event_target_as = vichy_france
 				set_country_flag = vichy_france
+				inherit_technology = FRA
+				remove_ideas = VIC_afk
+				set_research_slots = 5
+				set_capital = { state = 26 }
 				every_state = { #transfer French colonial empire
 					limit = {
 						is_controlled_by = FRA
@@ -429,13 +427,8 @@ country_event = {
 						CONTROLLER = { 
 							OR = {
 								original_tag = FRA
-								AND  = {
-									has_war_with = FRA
-									NOT = {	#Especially Switzerland can obtain states before the war
-										owns_state = PREV
-									}
-								}
-							}
+								has_war_with = FRA
+							} 
 						} #failsafe for weird shit (tm)
 					}
 					add_core_of = PREV
@@ -491,25 +484,7 @@ country_event = {
 					neutrality = 30
 					communism = 2
 				}
-				set_cosmetic_tag = FRA_VICHY
-				FRA = {
-					FRA_philippe_petain= {
-						set_nationality = event_target:vichy_france	
-					}
-				}
-				FRA_philippe_petain= {
-					add_country_leader_role = {
-						country_leader = {
-							expire = "1965.1.1"
-							ideology = fascism_ideology
-							traits = {
-								
-							}
-						}
-						promote_leader = yes
-					}
-				}
-				transfer_advisors_to_vichy = yes
+
 				set_variable = { FRA.FRA_naval_keep = 0.85}
 				set_variable = { FRA.FRA_air_keep = 1}
 				set_variable = { FRA.FRA_army_keep = 1}
@@ -563,9 +538,8 @@ country_event = {
 
 				log = "% of French Stuff going to Vichy France: (Legitmacy [?FRA.FRA_legitimacy] - Army [?FRA.FRA_army_keep] - Navy [?FRA.FRA_naval_keep] - Air [?FRA.FRA_air_keep] - Stockpile [?FRA.FRA_stockpile_keep]"				
 
-				add_dynamic_modifier = { modifier = dockyard_cg_mod }
 				add_ideas = FRA_occupation_costs_4
-				load_focus_tree = vichy_french_focus
+
 				FRA = {
 					transfer_units_fraction = {
 						target = event_target:vichy_france
@@ -593,12 +567,9 @@ country_event = {
 				}
 			}
 		}
-		random_country = {
-			limit = {
-				has_focus_tree = vichy_french_focus
-			}
+		VIC = {
 			GER = {
-				give_guarantee = PREV
+				give_guarantee = VIC
 			}
 			every_unit_leader = {
 				limit = {
@@ -665,6 +636,7 @@ country_event = {
 					army = { small = GFX_idea_viktor_schutze }
 				}
 			}
+
 			generate_character = {
 				token_base = generic_popular_figurehead # token will be TAG_token_base
 				advisor = {
@@ -1229,15 +1201,12 @@ country_event = {
 					is_in_faction_with = GER
 				}
 			}
-			create_faction_from_template = {
-				template = faction_template_the_little_entente
-				name = french_alliance
-			}
+			create_faction = "french_alliance"
 			add_to_faction = YUG
 			YUG = {
 				add_ai_strategy = {
 					type = alliance
-					id = FRA
+					id = "FRA"
 					value = 200
 				}
 			}

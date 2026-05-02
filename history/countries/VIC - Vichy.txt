@@ -1,31 +1,21 @@
-﻿capital = 16 # Paris/Ile de France
+﻿capital = 713 # Paris/Ile de France
 
-oob = "FRA_1936"
+set_cosmetic_tag = FRA_VICHY
+
+oob = "VIC_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "FRA_1936_naval_mtg"
+		set_naval_oob = "VIC_1936_naval_mtg"
 	else = {
-		set_naval_oob = "FRA_1936_naval_legacy"
+		set_naval_oob = "VIC_1936_naval_legacy"
 	}
 }
 
-IF = {
-	limit = {
-		has_dlc = "Gotterdammerung"
-	}
-	set_stability = 0.45 # Was 0.5, but they now get +5% from the Eiffel Tower
-	ELSE = {
-		set_stability = 0.5
-	}
-}
-
-set_research_slots = 5
+set_research_slots = 0
 set_stability = 0.5
-set_war_support = 0.1
-set_major = yes
+set_war_support = 0.5
 complete_special_project = {
 	project = sp:sp_naval_cruiser_submarine
-	scientist = FRA_henri_edmond_fouche
 }
 
 add_breakthrough_progress = {
@@ -113,7 +103,6 @@ if = {
 		basic_dp_light_battery = 1
 		#cruiser_submarines = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
 }
 # if = {
 # 	limit = { has_dlc = "By Blood Alone" }
@@ -146,34 +135,30 @@ set_convoys = 300
 
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = fascism
 	last_election = "1932.5.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 64
-	fascism = 1
-	neutrality = 15
-	communism = 20
+	democratic = 22
+	fascism = 46
+	neutrality = 30
+	communism = 2
 }
 set_variable = { allies_poster_center_icon_frame = 1 }
 add_ideas = {
-	FRA_victors_of_wwi
-	FRA_disjointed_government
-	FRA_protected_by_the_maginot_line
-	limited_conscription
-	FRA_full_employment
-	FRA_political_violence
-	FRA_inefficient_economy_2
-	FRA_incompetent_command
+	VIC_afk
 }
 
-28 = {
-	add_dynamic_modifier = { modifier = maginot_defences }
-}
+#vichy
 
-set_variable = { dockyard_major = 1 }
+recruit_character = VIC_philippe_petain
+recruit_character = VIC_vichy_tank_guy
+recruit_character = VIC_vichy_civ_guy
+recruit_character = VIC_vichy_mil_guy
+recruit_character = VIC_vichy_inf_guy
+
 #set_variable = { FRA_poster_center_icon_frame = 1 }
 set_variable = { FRA_new_propaganda_campaign = 0 } #Used to pick a poster slot
 set_variable = { FRA_propaganda_campaign_to_remove = 0 } #Used to reset a poster slot
@@ -181,91 +166,6 @@ set_variable = { FRA_propaganda_campaign_to_remove = 0 } #Used to reset a poster
 set_variable = { FRA_propaganda_empty_slot_index = 1 } #### === INSERT EMPTY SLOT INDEX IN STRIPE HERE === ####
 set_variable = { FRA_poster_left_icon_frame = FRA_propaganda_empty_slot_index } #Set up the appropriate empty slot GFX
 set_variable = { FRA_poster_center_icon_frame = FRA_propaganda_empty_slot_index } #Set up the appropriate locked slot GFX
-#set_variable = { SOV_poster_right_icon_frame = SOV_propaganda_locked_slot_index } #Set up the appropriate locked slot GFX
-give_guarantee = CZE
-give_guarantee = YUG
-#give_guarantee = ROM
-
-
-#----
-recruit_character = FRA_maurice_thorez
-recruit_character = FRA_pierre_laval
-recruit_character = FRA_edouard_daladier
-recruit_character = FRA_jean_de_lattre_de_tassigny
-recruit_character = FRA_alphonse_juin
-recruit_character = FRA_maurice_gamelin
-recruit_character = FRA_maxime_weygand
-recruit_character = FRA_alphonse_georges
-recruit_character = FRA_antoinemariebenoit_besson
-recruit_character = FRA_charles_de_gaulle
-recruit_character = FRA_philippe_leclerc
-recruit_character = FRA_henri_giraud
-recruit_character = FRA_charles_huntziger
-recruit_character = FRA_gastonhenri_billotte
-recruit_character = FRA_henry_freydenberg
-recruit_character = FRA_rene_olry
-recruit_character = FRA_francois_darlan
-recruit_character = FRA_jeanmarie_charles_abrial
-recruit_character = FRA_jeanpierre_esteva
-recruit_character = FRA_jean_de_laborde
-# recruit_character = FRA_denis_guillaumat # Has been removed to make way for Charles Maurras, but might be readded
-recruit_character = FRA_philippe_fequant
-recruit_character = FRA_jean_romatet
-recruit_character = FRA_joseph_doumenc
-recruit_character = FRA_emile_laure
-recruit_character = FRA_victor_denain
-recruit_character = FRA_jean_marie_abrial
-recruit_character = FRA_jean_decoux
-recruit_character = FRA_jean_marie_bergeret
-recruit_character = FRA_marcel_gensoul
-recruit_character = FRA_martial_valin
-recruit_character = FRA_rene_emile_godfroy
-recruit_character = FRA_joseph_vuillemin
-recruit_character = FRA_henri_marie_auguste_bineau
-recruit_character = FRA_louis_kahn
-recruit_character = FRA_robert_odic
-recruit_character = FRA_jean_francois_jannekeyn
-recruit_character = FRA_emile_muselier
-recruit_character = FRA_alfred_heurtaux
-recruit_character = FRA_rene_prioux
-recruit_character = FRA_pierre_alombert_goget
-recruit_character = FRA_gaston_henry_haye
-recruit_character = FRA_georges_bonnet
-recruit_character = FRA_philippe_henriot
-recruit_character = FRA_paul_reynaud
-recruit_character = FRA_pierre_pucheu
-recruit_character = FRA_charles_tillon
-recruit_character = FRA_vincent_auriol
-recruit_character = FRA_rene_massigli
-recruit_character = FRA_charles_maurras
-recruit_character = FRA_zivony_peshkov
-recruit_character = FRA_roger_salengro
-recruit_character = FRA_leon_blum
-recruit_character = FRA_felix_gouin
-recruit_character = FRA_paul_baudouin
-recruit_character = FRA_maurice_gauche
-recruit_character = FRA_jacques_duclos
-recruit_character = FRA_marcel_bucard
-recruit_character = FRA_georges_valois
-recruit_character = FRA_marcel_deat
-
-recruit_character = FRA_irene_joliot_curie
-recruit_character = FRA_frederic_joliot_curie
-recruit_character = FRA_francois_hussenot
-recruit_character = FRA_louis_renault
-recruit_character = FRA_henri_edmond_fouche
-recruit_character = FRA_joseph_bethenod
-
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Gotterdammerung"
-			has_dlc = "No Step Back"
-		}
-	}
-	recruit_character = FRA_emile_rimailho #Artillery Scientist
-	recruit_character = FRA_eugene_schneider_ii #Artillery Scientist
-}
 
 create_equipment_variant = {
 	name = "Renault R35"
@@ -334,49 +234,6 @@ create_equipment_variant = {
 	}
 	icon = "gfx/interface/technologies/tanks/fra/fra_super_1.dds"
 	obsolete = yes #used for oob
-}
-
-if = {
-	limit = { has_dlc = "La Resistance" }
-	create_operative_leader = {
-		name = "Jeannie Rousseau"
-		GFX = GFX_portrait_jennie_rousseau
-		#traits = { operative_linguist }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { FRA }
-	}
-
-	create_operative_leader = {
-		name = "Odette Samson"
-		GFX = GFX_portrait_odette_samson
-		traits = { operative_tough }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { FRA }
-	}
-
-	create_operative_leader = {
-		name = "René Joyeuse"
-		GFX = GFX_portrait_rene_joyeuse
-		traits = { operative_infiltrator operative_commando }
-		bypass_recruitment = no
-		available_to_spy_master = no
-		nationalities = { FRA }
-	}
-
-	create_operative_leader = {
-		name = "Gilbert Renault"
-		GFX = GFX_portrait_gilbert_renault
-		traits = { }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { FRA }
-	}
-
-	recruit_character = FRA_rene_nicod
 }
 
 ### VARIANTS ###

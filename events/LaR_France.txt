@@ -1400,7 +1400,7 @@ country_event = {
 	option = {
 		name = FRA_indochina_intervention.1.a
 		event_target:free_france = {
-			transfer_state = 1017
+			transfer_state = 670
 			transfer_state = 671
 			transfer_state = 741
 		}
@@ -1419,7 +1419,7 @@ country_event = {
 		name = FRA_indochina_intervention.1.a
 		effect_tooltip = {
 			event_target:free_france = {
-				transfer_state = 1017
+				transfer_state = 670
 				transfer_state = 671
 				transfer_state = 74
 			}
@@ -2247,14 +2247,6 @@ country_event = {
 		effect_tooltip = {
 			FROM = {
 				puppet = PREV
-				IF = {
-					limit = {
-						ROOT = {
-							has_subject = COG
-						}
-					}
-					puppet = COG 
-				}
 			}
 		}
 	}
@@ -2288,18 +2280,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_subject = COG
-				}
-			}
-			puppet = COG
-		}
-
 		puppet = FROM
-
 	}
 }
 #response event for France - country refuses
@@ -2354,14 +2335,6 @@ country_event = {
 		effect_tooltip = {
 			FRA = {
 				puppet = PREV
-				IF = {
-					limit = {
-						ROOT = {
-							has_subject = COG
-						}
-					}
-					puppet = COG 
-				}
 				transfer_state = 34
 				transfer_state = 980
 			}
@@ -2396,14 +2369,6 @@ country_event = {
 		name = lar_split_belgium.2.a #agree
 		ai_chance = {
 			factor = 100
-		}
-		IF = {
-			limit = {
-				FROM = {
-					has_subject = COG
-				}
-			}
-			puppet = COG
 		}
 		puppet = FROM
 		transfer_state = 34
@@ -2718,10 +2683,7 @@ country_event = {
 			}
 		}
 		else = {
-			create_faction_from_template = {
-				template = faction_template_the_little_entente
-				name = FRA_stresa_front
-			}
+			create_faction = FRA_stresa_front
 			add_to_faction = ITA
 		}
 		if = {
@@ -3039,7 +3001,6 @@ country_event = {
 			}
 			FROM = { add_to_faction = ROOT }
 		}
-		load_focus_tree = french_focus
 		# unlock_national_focus = FRA_revive_the_national_bloc
 		# unlock_national_focus = FRA_utilize_the_leagues
 		# unlock_national_focus = FRA_national_regeneration
